@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fetch the Bone — Mini Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Fetch the Bone 🐶</h1>
+
+    <div id="hud">
+      <span id="score">Score: 0</span>
+      <span id="lives">Lives: 3</span>
+      <button id="startBtn">Start</button>
+      <label><input id="enableHand" type="checkbox"> Enable Hand Control (webcam)</label>
+    </div>
+
+    <div class="canvas-wrap">
+      <video id="webcam" autoplay playsinline style="display:none"></video>
+      <canvas id="gameCanvas" width="800" height="500"></canvas>
+    </div>
+
+    <p class="note">Controls: arrow keys / A D, mouse move; or enable hand control.</p>
+  </div>
+
+  <!-- Optional: MediaPipe (for hand tracking) via jsDelivr -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+
+  <script src="game.js"></script>
+</body>
+</html>
